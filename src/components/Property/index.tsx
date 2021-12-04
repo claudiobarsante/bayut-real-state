@@ -22,7 +22,7 @@ export type PropertyDetails = {
   title: string;
 };
 
-type PropertyProps = {
+export type PropertyProps = {
   property: PropertyDetails;
 };
 
