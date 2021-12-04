@@ -6,6 +6,7 @@ import { GoVerified } from 'react-icons/go';
 import millify from 'millify';
 import { baseUrl, fetchApi } from '../../services/apiClient';
 import ImageScrollbar from '../../components/ImageScrollbar';
+import { GetStaticPaths, GetStaticProps } from 'next';
 
 const PropertyDetails = ({
   propertyDetails: {
@@ -124,7 +125,24 @@ const PropertyDetails = ({
 );
 
 export default PropertyDetails;
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   return {
+//     paths: [],
+//     fallback: 'blocking'
+//   };
+// };
 
+// export const getStaticProps: GetStaticProps = async ({ params }) => {
+//   console.log('params', params);
+//   const { id } = params;
+//   const data = await fetchApi(`${baseUrl}/properties/detail?externalID=${id}`);
+
+//   return {
+//     props: {
+//       propertyDetails: data
+//     }
+//   };
+// };
 export async function getServerSideProps({ params: { id } }) {
   const data = await fetchApi(`${baseUrl}/properties/detail?externalID=${id}`);
 

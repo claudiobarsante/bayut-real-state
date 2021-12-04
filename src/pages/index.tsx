@@ -1,7 +1,5 @@
-import type { GetStaticProps, NextPage } from 'next';
-import Link from 'next/link';
-import Image from 'next/image';
-import { Flex, Box, Text, Button } from '@chakra-ui/react';
+import type { GetStaticProps } from 'next';
+import { Flex, Box } from '@chakra-ui/react';
 import Banner from '../components/Banner';
 import { baseUrl, fetchApi } from '../services/apiClient';
 import Property, { PropertyDetails } from '../components/Property';
