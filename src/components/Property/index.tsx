@@ -39,6 +39,7 @@ const Property = ({ property }: PropertyProps) => {
     isVerified,
     externalID
   } = property;
+
   return (
     <Link href={`/property/${externalID}`} passHref>
       <Flex
