@@ -49,7 +49,7 @@ export default function ImageSrollbar({ data }: any) {
     <ScrollMenu
       LeftArrow={LeftArrow}
       RightArrow={RightArrow}
-      style={{ overflow: 'hidden' }}
+      //style={{ overflow: 'hidden' }}
     >
       {data.map((item: any) => (
         <Box
