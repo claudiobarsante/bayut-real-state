@@ -103,7 +103,7 @@ const PropertyDetails = ({
         </Text>
       )}
       <Flex flexWrap="wrap">
-        {amenities?.map((item) =>
+        {amenities?.map((item: { amenities: any[] }) =>
           item?.amenities?.map((amenity) => (
             <Text
               key={amenity.text}
@@ -125,24 +125,7 @@ const PropertyDetails = ({
 );
 
 export default PropertyDetails;
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   return {
-//     paths: [],
-//     fallback: 'blocking'
-//   };
-// };
 
-// export const getStaticProps: GetStaticProps = async ({ params }) => {
-//   console.log('params', params);
-//   const { id } = params;
-//   const data = await fetchApi(`${baseUrl}/properties/detail?externalID=${id}`);
-
-//   return {
-//     props: {
-//       propertyDetails: data
-//     }
-//   };
-// };
 export async function getServerSideProps({ params: { id } }) {
   const data = await fetchApi(`${baseUrl}/properties/detail?externalID=${id}`);
 
