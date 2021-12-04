@@ -46,11 +46,7 @@ type ScrollbarProps = {
 
 export default function ImageSrollbar({ data }: any) {
   return (
-    <ScrollMenu
-      LeftArrow={LeftArrow}
-      RightArrow={RightArrow}
-      //style={{ overflow: 'hidden' }}
-    >
+    <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
       {data.map((item: any) => (
         <Box
           width="910px"
