@@ -57,7 +57,6 @@ export const getStaticProps: GetStaticProps = async () => {
     `${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`
   );
 
-  console.log('propertyForSale', propertyForSale);
   return {
     props: {
       propertiesForSale: propertyForSale?.hits,

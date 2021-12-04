@@ -54,7 +54,7 @@ const Property = ({ property }: PropertyProps) => {
             src={coverPhoto ? coverPhoto.url : DefaultImage}
             width={400}
             height={260}
-            alt="default image"
+            alt="house"
           />
         </Box>
         <Box w="full">
@@ -68,12 +68,12 @@ const Property = ({ property }: PropertyProps) => {
                 {isVerified && <GoVerified />}
               </Box>
               <Text fontWeight="bold" fontSize="lg">
-                AED {price}
+                AED {millify(price)}
                 {rentFrequency && `/${rentFrequency}`}
               </Text>
             </Flex>
             <Box>
-              <Avatar size="sm" src={agency?.logo?.url}></Avatar>
+              <Avatar size="sm" src={agency?.logo?.url} />
             </Box>
           </Flex>
           <Flex
