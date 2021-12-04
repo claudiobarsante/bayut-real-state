@@ -4,10 +4,7 @@ import Image from 'next/image';
 import { Flex, Box, Text, Icon } from '@chakra-ui/react';
 import { BsFilter } from 'react-icons/bs';
 
-import Property, {
-  PropertyDetails,
-  PropertyProps
-} from '../components/Property';
+import Property, { PropertyDetails } from '../components/Property';
 import noresult from '../assets/images/noresult.svg';
 
 import { baseUrl, fetchApi } from '../services/apiClient';
